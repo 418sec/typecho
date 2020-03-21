@@ -352,7 +352,13 @@ class Typecho_I18n_GetText
             else
                 return $single;
         }
-
+        
+        if(preg_match("/^\d+/", $number, $match)){
+		    $number = $match[0];
+		}else{
+			$number = "";	// You can decide what to do when there is no number at beginning.
+		}
+        
         // find out the appropriate form
         $select = $this->select_string($number);
 
