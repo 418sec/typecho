@@ -333,10 +333,6 @@ class Typecho_I18n_GetText
         {
           eval("$string");
         }
-        else
-        {
-          echo "Number has to be numeric";
-        }
         if ($plural >= $total) $plural = $total - 1;
         return $plural;
     }
